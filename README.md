@@ -1,7 +1,7 @@
 # react_native-UI
 
 <h1> 🔥 Practice react native Navigation and Ui</h1>
-<p>take alook 🚀 </p>
+<p>Take alook 🚀 </p>
  
 ![](https://github.com/mahmoud-mohasseb/react_native-UI/blob/main/assets/practice%20design.gif)
 
