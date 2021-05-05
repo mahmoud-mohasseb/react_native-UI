@@ -1,21 +1,29 @@
+// My design 
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+// import { NativeRouter } from "react-router-native";
+import { NavigationContainer } from '@react-navigation/native';
+import DrawerList from "./components/navigation/Drawer";
+import { useFonts } from "expo-font";
 
-export default function App() {
+// import AwesomeIcon from 'react-native-vector-icons/FontAwesome';
+// import About from "./components/about";
+// import Home from "./components/Home";
+
+{/* <AppNav /> */ }
+const App = () => {
+  const [loaded] = useFonts({
+    Bold: require('./assets/fonts/Roboto-Bold.ttf'),
+    Regular: require('./assets/fonts/Roboto-Regular.ttf'),
+    Akaya: require('./assets/fonts/AkayaTelivigala-Regular.ttf')
+  });
+
+  if (!loaded) {
+    return null;
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <DrawerList />
+  )
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
